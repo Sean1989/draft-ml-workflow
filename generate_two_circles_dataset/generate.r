@@ -34,3 +34,17 @@ plot(-max:max, -max:max, type = "n",
      xlab = "Values of x", ylab = "Values of y")
 points(x,y, pch = 5, col = "tomato") # 5 for diamonds
 points(x.second, y.second, pch = 19, col = "light blue")  # 19 for solid circles
+
+# label the two classes explicitly
+df <- data.frame(a = x, b = y, class = 0)
+df.second <- data.frame(a = x.second, b = y.second, class = 1)
+
+## make a mix of the two classes:
+
+# append the two datasets
+ds <- rbind(df, df.second)
+# shuffle the data
+dataset <- ds[sample(nrow(ds)),]
+
+# output
+write.csv(dataset, file="two_circles.csv", row.names=FALSE)
