@@ -7,44 +7,45 @@
 # =>
 # generate x coords and then calculate y
 
-r <- 5
-r.second <- 15
+new.points <- function(class = 0, radius = 5, distortion = 2, nr.of.samples = 100){
+  # Returns a dataframe with points roughly located on a circle
+  # Output:
+  #    - dataframe:
+  #         x | y | class
+  #
+  #      where (x, y) are coordinates of the points, all of the same pre-set "class".
+  #
+  set.seed(0)
+  x <- sample(-radius:radius, nr.of.samples, replace=TRUE)
+  y <- sqrt(radius^2 - x^2) * sample(c(-1,1), nr.of.samples, replace=TRUE) 
+  # introduce distortion: our points should not be exactly on the circle
+  x <- x + sample(-distortion:distortion, nr.of.samples, replace=TRUE)
+  y <- y + sample(-distortion:distortion, nr.of.samples, replace=TRUE)
+  # create a dataframe
+  df <- data.frame(x = x, y = y, class = class)
+  return(df)
+}
 
-nr.of.samples <- 100  
-nr.of.samples.second <- 120
+##
+## Working with data
+##
 
-set.seed(0)
-x <- sample(-r:r, nr.of.samples, replace=TRUE)
-y <- sqrt(r^2 - x^2) * sample(c(-1,1), nr.of.samples, replace=TRUE) # so we can have negative y's as well
-# introduce fuzziness
-x <- x + sample(-2:2, nr.of.samples, replace=TRUE)
-y <- y + sample(-2:2, nr.of.samples, replace=TRUE)
-
-set.seed(0)
-x.second <- sample(-r.second:r.second, nr.of.samples.second, replace=TRUE)
-y.second <- sqrt(r.second^2 - x.second^2) * sample(c(-1,1), nr.of.samples.second, replace=TRUE) # so we can have negative y's a well
-# introduce fuzziness
-x.second <- x.second + sample(-2:2, nr.of.samples.second, replace=TRUE)
-y.second <- y.second + sample(-2:2, nr.of.samples.second, replace=TRUE)
+df.first  <- new.points(class = 0, radius = 5, nr.of.samples = 100)
+df.second <- new.points(class = 1, radius = 15, nr.of.samples = 120)
 
 # create a plot
-max <- r.second + 5
+max <- 20
 plot(-max:max, -max:max, type = "n", 
      main = "Points on two fuzzy circles",
      xlab = "Values of x", ylab = "Values of y")
-points(x,y, pch = 5, col = "tomato") # 5 for diamonds
-points(x.second, y.second, pch = 19, col = "light blue")  # 19 for solid circles
+points(df.first$x,  df.first$y,  pch = 5,  col = "tomato") # 5 for diamonds
+points(df.second$x, df.second$y, pch = 19, col = "light blue")  # 19 for solid circles
 
-# label the two classes explicitly
-df <- data.frame(a = x, b = y, class = 0)
-df.second <- data.frame(a = x.second, b = y.second, class = 1)
-
-## make a mix of the two classes:
 
 # append the two datasets
-ds <- rbind(df, df.second)
+dataset <- rbind(df.first, df.second)
 # shuffle the data
-dataset <- ds[sample(nrow(ds)),]
+dataset <- dataset[sample(nrow(dataset)),]
 
 # output
 write.csv(dataset, file="two_circles.csv", row.names=FALSE)
