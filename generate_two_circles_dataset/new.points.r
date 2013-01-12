@@ -1,7 +1,8 @@
 # Returns a dataframe with points roughly located on a circle
 
 # Input:
-#    - class: set the class here, it will be the same for all generated points. This value is only used to generate the "class" column in the resulting dataframe.
+#    - class: set the class here, it will be the same for all generated points. 
+#             (This value is only used to generate the "class" column in the resulting dataframe.)
 #    - radius: the radius of the circle
 #    - distortion: how far away our points can go from the circle?
 #    - nr.of.samples: number of samples to generate
