@@ -1,0 +1,7 @@
+import pandas
+
+data = pandas.read_csv('../data/accurate-dataset.csv')
+n_features = 2
+n_samples = len(data)
+
+
