@@ -1,11 +1,17 @@
 import pandas
 from sklearn.svm import LinearSVC
 from sklearn import metrics
+from sklearn import preprocessing
 
 # Read the data
 
-data = pandas.read_csv('../data/accurate-dataset.csv')
+data = pandas.read_csv('../data/float_features_dataset.csv')
 n_samples = len(data)
+
+# Preprocessing
+
+data.x = preprocessing.scale(data.x)
+data.y = preprocessing.scale(data.y)
 
 # Split it into train and test sets
 
@@ -29,6 +35,6 @@ y_test = [int(i) for i in y_test.values]
 
 # Evaluate the prediction
 
-metrics.precision_score(y_test, y_pred)  # 0.50909090909090904
-metrics.recall_score(y_test, y_pred)     # 0.56000000000000005
-metrics.f1_score(y_test, y_pred)         # 0.53333333333333333
+metrics.precision_score(y_test, y_pred)  
+metrics.recall_score(y_test, y_pred)     
+metrics.f1_score(y_test, y_pred)         
