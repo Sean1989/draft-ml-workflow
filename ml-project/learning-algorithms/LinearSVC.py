@@ -38,3 +38,10 @@ y_test = [int(i) for i in y_test.values]
 metrics.precision_score(y_test, y_pred)  
 metrics.recall_score(y_test, y_pred)     
 metrics.f1_score(y_test, y_pred)         
+
+
+# Experiment results:
+#                No preprocessing     |   With preprocessing
+# Precision     0.45901639344262296   |        0.46875
+# Recall        0.56000000000000005   |  0.59999999999999998
+# F1 score      0.50450450450450446   |  0.52631578947368418
