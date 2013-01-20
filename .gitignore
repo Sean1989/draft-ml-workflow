@@ -3,11 +3,9 @@
 
 # Except for the specific directories:
 
-!ml-project/
-!ml-project/data/
-!ml-project/experiments/
-!ml-project/generate-data/
-
+!data/
+!experiments/
+!generate-data/
 
 
 # ignore backup files
