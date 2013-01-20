@@ -1,7 +1,8 @@
-import classification
 from numpy import genfromtxt
 from sklearn import preprocessing
 from sklearn import metrics
+from classification import linear_svc
+from classification import svc_with_rbf_kernel
 
 # Read the data
 
@@ -29,8 +30,10 @@ y_pred = svc.predict(X_test)
 
 # Evaluate the prediction
 
-metrics.precision_score(y_test, y_pred)  
-metrics.recall_score(y_test, y_pred)     
-metrics.f1_score(y_test, y_pred)         
+print "Evaluating results..."
+
+print "Precision: \t", metrics.precision_score(y_test, y_pred)  
+print "Recall: \t", metrics.recall_score(y_test, y_pred)     
+print "F1 score: \t", metrics.f1_score(y_test, y_pred)         
 
 
