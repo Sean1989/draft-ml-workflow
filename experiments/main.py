@@ -5,7 +5,7 @@ from sklearn import metrics
 
 # Read the data
 
-data = genfromtxt('../data/float_features_dataset.csv', delimiter=',', skiprows=1)
+data = genfromtxt('../data/float_features_dataset.csv', delimiter=',', skip_header=1)
 n_samples = len(data)
 
 # Scale features
