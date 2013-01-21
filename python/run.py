@@ -22,7 +22,7 @@ def run(data_path, algorithm):
 
     # Apply a learning algorithm
     try:
-        training_algorithm = locals()[algorithm]
+        training_algorithm = globals()[algorithm]
         clf = training_algorithm(X_train, y_train)
     except KeyError:
         print "Training algorithm is not located. Please check it again." 
