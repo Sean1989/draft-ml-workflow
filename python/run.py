@@ -4,6 +4,8 @@ from numpy import genfromtxt
 from sklearn import preprocessing
 from sklearn import metrics
 from classification import *
+from datetime import datetime
+import re
 
 def run(data_path, algorithm):
     # Read the data
@@ -33,26 +35,47 @@ def run(data_path, algorithm):
 
     # Evaluate the prediction
     print "Evaluating results..."
-    print "Precision: \t", metrics.precision_score(y_test, y_pred)  
-    print "Recall: \t", metrics.recall_score(y_test, y_pred)     
-    print "F1 score: \t", metrics.f1_score(y_test, y_pred)        
+    results = dict()
+    results['Precision'] = float(metrics.precision_score(y_test, y_pred))
+    results['Recall'] = float(metrics.recall_score(y_test, y_pred))     
+    results['F1 score'] = float(metrics.f1_score(y_test, y_pred))        
 
-    # Dump the results in a file
-    # ... return results into the main function -> and later save them into ...._results.yaml
+    print "Precision: \t", results['Precision']
+    print "Recall: \t", results['Recall']
+    print "F1 score: \t", results['F1 score']
+
+    return results
 
 
 if __name__ == "__main__":
     try:
-        options = yaml.load(open(sys.argv[1]))
-        run(options['Data'], options['Algorithm'])
-    except yaml.scanner.ScannerError:
-        print "Error when scanning the options file (.yaml): please check it again."
+        path = sys.argv[1]
+        options = yaml.load(open(path))        
     except IndexError:
         print "No options file (.yaml) found. Running the default experiment."
-        options = yaml.load(open('../experiments/default.yaml'))
-        run(options['Data'], options['Algorithm'])
+        path = '../experiments/default.yaml'
+        options = yaml.load(open(path))
+    except yaml.scanner.ScannerError:
+        print "Error when scanning the options file (.yaml): please check it again."
+        raise
     except:
         print "Something went wrong:\n", sys.exc_info()[0]
         raise
+
+    results = run(options['Data'], options['Algorithm'])  
+
+    # Write options and results into an output file
+    
+    m = re.search('([^/]*)\.yaml', path)
+    input_filename = m.group(0)
+    output_path = path[0:path.index(input_filename)] + 'results/' +\
+                  input_filename[0:input_filename.index('.yaml')] +\
+                  '_' + datetime.now().strftime("%Y%m%d_%H%M") +\
+                  '.yaml'
+    
+    with open(output_path, 'wb') as f:
+        yaml.dump(options, f, default_flow_style=False)
+        yaml.dump(results, f, default_flow_style=False)
+ 
 
 
