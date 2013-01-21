@@ -1,0 +1,3 @@
+Data: ../data/float_features_dataset.csv
+Algorithm: svc_rbf
+
