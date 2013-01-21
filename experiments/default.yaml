@@ -1,4 +1,8 @@
 Data: ../data/float_features_dataset.csv
+<<<<<<< HEAD
 Read as: numbers
 Algorithm: default_svc
+=======
+Algorithm: svc_rbf
+>>>>>>> aef43c7... Experiment settings
 
