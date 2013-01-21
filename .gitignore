@@ -6,6 +6,7 @@
 !data/
 !experiments/
 !generate-data/
+!python/
 
 
 # ignore backup files
