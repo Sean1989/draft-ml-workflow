@@ -1,0 +1,3 @@
+Data: ../data/spambase.data # http://archive.ics.uci.edu/ml/datasets/Spambase
+Algorithm: svc_rbf
+
