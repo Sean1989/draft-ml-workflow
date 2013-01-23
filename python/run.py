@@ -12,15 +12,13 @@ import re
 def run(data_path, algorithm):
     # Read the data
     print "Reading the dataset:", data_path
-    data = genfromtxt(data_path, delimiter=',', skip_header=1)
-    n_samples = len(data)
+    data = genfromtxt(data_path, delimiter=',')
 
     # Scale features
     features = preprocessing.scale(data[:, 0:-1])
     target = data[:, -1]
 
     # Split it into train and test sets
-
     X_train, X_test, y_train, y_test = train_test_split(
         features, target, test_size=0.33, random_state=17)
 
