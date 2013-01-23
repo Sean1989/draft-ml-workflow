@@ -3,6 +3,7 @@ import yaml
 from numpy import genfromtxt
 from sklearn import preprocessing
 from sklearn import metrics
+from sklearn.cross_validation import train_test_split
 from classification import *
 from datetime import datetime
 import re
@@ -15,13 +16,13 @@ def run(data_path, algorithm):
     n_samples = len(data)
 
     # Scale features
-    data[:, 0:-1] = preprocessing.scale(data[:, 0:-1])
+    features = preprocessing.scale(data[:, 0:-1])
+    target = data[:, -1]
 
     # Split it into train and test sets
-    boundary = int(n_samples * 0.6)
-    train, test = data[:boundary], data[boundary:]
-    X_train, X_test = train[:, :-1], test[:, :-1]
-    y_train, y_test = train[:, -1], test[:, -1]
+
+    X_train, X_test, y_train, y_test = train_test_split(
+        features, target, test_size=0.33, random_state=17)
 
     # Apply a learning algorithm
     try:
