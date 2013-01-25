@@ -1,10 +1,9 @@
 import sys
 import yaml
 from numpy import genfromtxt
-from sklearn import preprocessing
 from sklearn import metrics
-from sklearn.cross_validation import train_test_split
 from classification import *
+from preprocess import *
 from datetime import datetime
 import re
 
@@ -12,15 +11,10 @@ import re
 def run(data_path, algorithm):
     # Read the data
     print "Reading the dataset:", data_path
-    data = genfromtxt(data_path, delimiter=',')
+    raw_data = genfromtxt(data_path, delimiter=',')
 
-    # Scale features
-    features = preprocessing.scale(data[:, 0:-1])
-    target = data[:, -1]
-
-    # Split it into train and test sets
-    X_train, X_test, y_train, y_test = train_test_split(
-        features, target, test_size=0.33, random_state=17)
+    # Preprocess the data
+    X_train, X_test, y_train, y_test = preprocess(raw_data)
 
     # Apply a learning algorithm
     try:
