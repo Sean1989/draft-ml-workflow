@@ -14,7 +14,7 @@ def run(data_path, algorithm):
     raw_data = genfromtxt(data_path, delimiter=',')
 
     # Preprocess the data
-    X_train, X_test, y_train, y_test = preprocess(raw_data)
+    X_train, X_test, y_train, y_test, constraints = preprocess(raw_data)
 
     # Apply a learning algorithm
     try:
