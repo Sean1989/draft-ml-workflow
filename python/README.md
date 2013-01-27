@@ -1,6 +1,19 @@
-Semi-supervised learning algorithm with pairwise constraints
+Semi-supervised learning with pairwise constraints
 ======
 
+# Setting
+
+* a small amount of labelled data; 
+* a large amount of unlabelled data with partial information in the form of pairwise constraints ("Do A and B belong to the same class?").
+
+# Input:
+* Labeled data: (x_i, y_i) - 
+_n_ samples.
+* Partially labeled data in the form of pairwise constraints: 
+(x_a, x_b, +1/-1): 
++1 if they belong to the same class, 
+-1 otherwise -
+_m_ samples.
 
 __References__: 
 
