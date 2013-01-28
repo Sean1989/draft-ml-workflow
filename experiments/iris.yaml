@@ -1,0 +1,3 @@
+Data: ../data/iris.data
+Algorithm: svc_rbf
+
