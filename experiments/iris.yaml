@@ -1,3 +1,4 @@
 Data: ../data/iris.data
+Read as: iris
 Algorithm: svc_rbf
 
