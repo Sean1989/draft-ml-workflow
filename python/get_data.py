@@ -11,6 +11,7 @@ from numpy import genfromtxt
 import csv
 
 
+
 def numbers(data_path):
     raw_data = genfromtxt(data_path, delimiter=',')
     return raw_data
