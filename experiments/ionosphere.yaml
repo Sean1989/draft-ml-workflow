@@ -1,0 +1,4 @@
+Data: ../data/ionosphere.data
+Read as: iris
+Algorithm: svc_rbf
+

@@ -1,0 +1,6 @@
+Algorithm: svc_rbf
+Data: ../data/ionosphere.data
+Read as: iris
+F1 score: 0.918918918918919
+Precision: 0.8947368421052632
+Recall: 0.9444444444444444
