@@ -1,17 +1,22 @@
 import sys
 import yaml
-from numpy import genfromtxt
 from sklearn import metrics
+from get_data import *
 from classification import *
 from preprocess import *
 from datetime import datetime
 import re
 
 
-def run(data_path, algorithm):
+def run(data_path, read_as, algorithm):
     # Read the data
     print "Reading the dataset:", data_path
-    raw_data = genfromtxt(data_path, delimiter=',')
+    try:
+        data_reading_function = globals()[read_as]
+        raw_data = data_reading_function(data_path)
+    except KeyError:
+        print "Data reading function is not located. Please check it again."
+        raise
 
     # Preprocess the data
     X_train, X_test, y_train, y_test, constraints = preprocess(raw_data)
@@ -57,7 +62,7 @@ if __name__ == "__main__":
         print "Something went wrong:\n", sys.exc_info()[0]
         raise
 
-    results = run(options['Data'], options['Algorithm'])
+    results = run(options['Data'], options['Read as'], options['Algorithm'])
 
     # Write options and results into an output file
 
