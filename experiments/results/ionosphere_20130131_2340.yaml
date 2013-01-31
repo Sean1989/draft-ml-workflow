@@ -1,0 +1,23 @@
+Algorithm: svc_rbf
+Data: ../data/ionosphere.data
+Read as: iris
+F1 score: 0.9673202614379085
+Mean accuracy: !!python/object/apply:numpy.core.multiarray.scalar
+- !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  WO5phOWe7j8=
+Precision: 0.9487179487179487
+Recall: 0.9866666666666667

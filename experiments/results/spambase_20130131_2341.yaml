@@ -1,0 +1,23 @@
+Algorithm: svc_rbf
+Data: ../data/spambase.data
+Read as: numbers
+F1 score: 0.9076923076923077
+Mean accuracy: !!python/object/apply:numpy.core.multiarray.scalar
+- !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  yQpAvI257T8=
+Precision: 0.9315789473684211
+Recall: 0.885
