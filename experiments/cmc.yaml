@@ -1,0 +1,4 @@
+Data: ../data/cmc.data  # http://archive.ics.uci.edu/ml/datasets/Contraceptive+Method+Choice
+Read as: numbers
+Algorithm: svc_rbf
+
