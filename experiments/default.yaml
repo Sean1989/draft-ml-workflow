@@ -1,4 +1,4 @@
 Data: ../data/float_features_dataset.csv
 Read as: numbers
-Algorithm: svc_rbf
+Algorithm: svc
 
