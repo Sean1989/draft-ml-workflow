@@ -20,7 +20,7 @@ def svc_rbf(X_train, y_train):
     # Grid search
     # http://scikit-learn.org/dev/auto_examples/grid_search_digits.html
 
-    tuned_parameters = [{'kernel': ['rbf'], 'gamma': [1e-1, 1e-2, 1e-3, 1e-4],
+    tuned_parameters = [{'kernel': ['rbf'], 'gamma': [1e-2, 1e-3, 1e-4],
                         'C': [1, 10, 100, 1000]},
                         {'kernel': ['linear'], 'C': [1, 10, 100, 1000]}]
 
