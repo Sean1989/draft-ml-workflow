@@ -7,15 +7,8 @@ from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 
 
-def linear_svc(X_train, y_train):
-    print "Training: Linear support vector classification..."
-    clf = LinearSVC()
-    clf = clf.fit(X_train, y_train)
-    return clf
-
-
-def svc_rbf(X_train, y_train):
-    print "Training: SVC with a Radial Basis Function (RBF) kernel..."
+def svc(X_train, y_train):
+    print "Training: SVC parameter tuning..."
 
     # Grid search
     # http://scikit-learn.org/dev/auto_examples/grid_search_digits.html
