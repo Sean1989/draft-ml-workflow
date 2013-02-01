@@ -1,0 +1,23 @@
+Algorithm: svc_rbf
+Data: ../data/cmc.data
+Read as: numbers
+F1 score: 0.5849042423266363
+Mean accuracy: !!python/object/apply:numpy.core.multiarray.scalar
+- !!python/object/apply:numpy.dtype
+  args:
+  - f8
+  - 0
+  - 1
+  state: !!python/tuple
+  - 3
+  - <
+  - null
+  - null
+  - null
+  - -1
+  - -1
+  - 0
+- !!binary |
+  xeZPWOjK4j8=
+Precision: 0.5878806100888784
+Recall: 0.5872689938398358
