@@ -38,7 +38,7 @@ def run(data_path, read_as, algorithm):
     results['Precision'] = float(metrics.precision_score(y_test, y_pred))
     results['Recall'] = float(metrics.recall_score(y_test, y_pred))
     results['F1 score'] = float(metrics.f1_score(y_test, y_pred))
-    results['Mean accuracy'] = clf.score(X_test, y_test)
+    results['Mean accuracy'] = float(clf.score(X_test, y_test))
 
     print "Precision: \t", results['Precision']
     print "Recall: \t", results['Recall']
