@@ -14,8 +14,7 @@ def svc(X_train, y_train):
     # http://scikit-learn.org/dev/auto_examples/grid_search_digits.html
 
     tuned_parameters = [{'kernel': ['rbf'], 'gamma': [1e-2, 1e-3, 1e-4],
-                        'C': [1, 10, 100, 1000]},
-                        {'kernel': ['linear'], 'C': [1, 10, 100, 1000]}]
+                        'C': [1, 10, 100, 1000]}]
 
     scores = [
         ('precision', precision_score),
