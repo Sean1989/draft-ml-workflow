@@ -127,7 +127,14 @@ class MNIST(object):
         image.save(path)
 
 if __name__ == "__main__":
-    print 'Testing'
-    mn = MNIST('.')
-    if mn.test():
-        print 'Passed'
+#    print 'Testing'
+#    mn = MNIST('.')
+#    if mn.test():
+#        print 'Passed'
+
+    """ Test by Nox
+    """
+    dataDir = "../data/mnist"
+    mn = MNIST(dataDir)
+    images, labels = mn.load_training()
+    mn.render_image(images[0], dataDir + "/images/test.jpg")
