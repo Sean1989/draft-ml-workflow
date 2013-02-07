@@ -22,7 +22,8 @@ Distributed under GNU General Public Licence
 import os
 import struct
 from array import array
-import Image
+from PIL import Image
+from PIL import ImageOps
 import numpy
 
 
@@ -124,6 +125,7 @@ class MNIST(object):
                 t.append([pixel, pixel, pixel])
             l.append(t)
         image = Image.fromarray(numpy.uint8(l))
+        image = ImageOps.invert(image)
         image.save(path)
 
 if __name__ == "__main__":
@@ -137,4 +139,4 @@ if __name__ == "__main__":
     dataDir = "../data/mnist"
     mn = MNIST(dataDir)
     images, labels = mn.load_training()
-    mn.render_image(images[0], dataDir + "/images/test.jpg")
+    mn.render_image(images[0], dataDir + "/images/test.png")
