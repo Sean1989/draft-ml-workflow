@@ -7,6 +7,13 @@ from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 
 
+def default_svc(X_train, y_train):
+    print "Training: SVC with a Radial Basis Function (RBF) kernel..."
+    svc = SVC(kernel='rbf')
+    svc.fit(X_train, y_train)
+    return svc
+
+
 def svc(X_train, y_train):
     print "Training: SVC parameter tuning..."
 
