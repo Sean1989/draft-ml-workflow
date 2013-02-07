@@ -1,29 +1,28 @@
 from sklearn import metrics
 from classification import *
 from mnist import MNIST
-from time import time, ctime
+from time import time
 
 
 def run(data_path):
-    # Read the data
-    print ctime()
     print "Reading the dataset:", data_path
     mn = MNIST(data_path)
     X_train, y_train = mn.load_training()
     X_test, y_test = mn.load_testing()
 
+    # Trunk the data
+    X_train, y_train = X_train[:600], y_train[:600]
+    X_test, y_test = X_test[:100], y_test[:100]
+
     # Apply a learning algorithm
-    print ctime()
     print "Applying a learning algorithm..."
     clf = default_svc(X_train, y_train)
 
     # Make a prediction
-    print ctime()
-    print "Making predictions"
+    print "Making predictions..."
     y_pred = clf.predict(X_test)
 
     # Evaluate the prediction
-    print ctime()
     print "Evaluating results..."
     print "Precision: \t", metrics.precision_score(y_test, y_pred)
     print "Recall: \t", metrics.recall_score(y_test, y_pred)
