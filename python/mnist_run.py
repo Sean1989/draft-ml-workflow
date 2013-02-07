@@ -18,10 +18,10 @@ def run(data_path):
 
     # Evaluate the prediction
     print "Evaluating results..."
-    print "Precision: \t", float(metrics.precision_score(y_test, y_pred))
-    print "Recall: \t", float(metrics.recall_score(y_test, y_pred))
-    print "F1 score: \t", float(metrics.f1_score(y_test, y_pred))
-    print "Mean accuracy: \t", float(clf.score(X_test, y_test))
+    print "Precision: \t", metrics.precision_score(y_test, y_pred)
+    print "Recall: \t", metrics.recall_score(y_test, y_pred)
+    print "F1 score: \t", metrics.f1_score(y_test, y_pred)
+    print "Mean accuracy: \t", clf.score(X_test, y_test)
 
 
 if __name__ == "__main__":
