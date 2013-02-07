@@ -1,7 +1,7 @@
 from sklearn import metrics
 from classification import *
 from mnist import MNIST
-from time import time
+import time
 
 
 def run(data_path):
@@ -31,8 +31,8 @@ def run(data_path):
 
 
 if __name__ == "__main__":
-    start_time = time()
+    start_time = time.time()
     data_path = "../data/mnist"
     results = run(data_path)
-    end_time = time()
+    end_time = time.time()
     print "Overall running time:", end_time - start_time
