@@ -23,6 +23,4 @@ Feel free to check out the ../experiments directory to see how to define a YAML 
 
 * __experiments/results__: automatically generated files that contain a result of each experiment. File names are generated automatically as well: file name of the initial experiment and a time stamp.
 
-* __generate_data__: My R code to generate an artificial dataset with two concentric circles. It will probably be forked into another repository.
-
 * __python__: my Python code to run the experiments. Under construction.
