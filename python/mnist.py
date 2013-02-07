@@ -112,7 +112,7 @@ class MNIST(object):
                 render += '0'
         return render
 
-    def render_image(self, image, path):
+    def render_image(self, image):
         """ Function by Nox
             https://github.com/sorki/python-
             mnist/commit/82c63e7dea77c372786a17087cebd82e0455100f
@@ -126,7 +126,15 @@ class MNIST(object):
             l.append(t)
         image = Image.fromarray(numpy.uint8(l))
         image = ImageOps.invert(image)
+        return image
+
+    def save_image(self, image, path):
+        image = self.render_image(image)
         image.save(path)
+
+    def show_image(self, image):
+        image = self.render_image(image)
+        image.show()
 
 if __name__ == "__main__":
 #    print 'Testing'
@@ -139,4 +147,4 @@ if __name__ == "__main__":
     dataDir = "../data/mnist"
     mn = MNIST(dataDir)
     images, labels = mn.load_training()
-    mn.render_image(images[0], dataDir + "/images/test.png")
+    mn.save_image(images[0], dataDir + "/images/test.png")
