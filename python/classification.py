@@ -14,6 +14,13 @@ def default_svc(X_train, y_train):
     return svc
 
 
+def linear_svc(X_train, y_train):
+    print "Training: Linear support vector classification..."
+    clf = LinearSVC()
+    clf = clf.fit(X_train, y_train)
+    return clf
+
+
 def svc(X_train, y_train):
     print "Training: SVC parameter tuning..."
 
