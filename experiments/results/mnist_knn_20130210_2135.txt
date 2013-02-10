@@ -1,0 +1,5 @@
+python mnist_knn.py
+Reading the dataset: ../data/mnist
+KNN validation accuracy on MNIST digits:  0.863
+Overall running time: 22.3866198063
+
