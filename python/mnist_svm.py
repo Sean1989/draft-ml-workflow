@@ -11,8 +11,8 @@ def run(data_path):
     X_test, y_test = mn.load_testing()
 
     # Trunk the data
-#    X_train, y_train = X_train[:600], y_train[:600]
-#    X_test, y_test = X_test[:100], y_test[:100]
+    X_train, y_train = X_train[:600], y_train[:600]
+    X_test, y_test = X_test[:100], y_test[:100]
 
     # Apply a learning algorithm
     print "Applying a learning algorithm..."
@@ -21,6 +21,8 @@ def run(data_path):
     # Make a prediction
     print "Making predictions..."
     y_pred = clf.predict(X_test)
+
+    print y_pred
 
     # Evaluate the prediction
     print "Evaluating results..."

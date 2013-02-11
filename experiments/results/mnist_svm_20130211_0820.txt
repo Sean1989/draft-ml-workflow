@@ -1,0 +1,15 @@
+python mnist_svm.py
+Reading the dataset: ../data/mnist
+Applying a learning algorithm...
+Training: SVC with a Radial Basis Function (RBF) kernel...
+Making predictions...
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+Evaluating results...
+Precision: 	0.0196
+Recall: 	0.14
+F1 score: 	0.0343859649123
+Mean accuracy: 	0.14
+Overall running time: 15.0967390537
+
