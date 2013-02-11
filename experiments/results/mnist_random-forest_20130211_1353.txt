@@ -1,0 +1,14 @@
+python mnist_random-forest.py 
+Reading the dataset: ../data/mnist
+Applying a learning algorithm...
+Making predictions...
+[7 6 1 0 4 1 4 3 2 9 0 8 9 0 1 2 9 7 3 4 9 6 2 5 4 0 7 4 0 1 3 1 3 6 7 2 7
+ 1 2 1 1 7 4 1 3 5 5 2 4 4 6 6 4 5 0 0 4 1 4 7 7 0 9 3 9 9 5 4 4 0 7 0 2 3
+ 1 7 3 7 9 7 9 6 2 7 4 4 7 3 4 1 3 6 9 3 1 4 1 7 6 9]
+Evaluating results...
+Precision: 	0.747323529412
+Recall: 	0.76
+F1 score: 	0.750053763441
+Mean accuracy: 	0.76
+Overall running time: 9.17173814774
+
