@@ -1,0 +1,30 @@
+Attempt #1
+Overall running time: 2.46233582497
+
+Attempt #2
+Overall running time: 2.49544215202
+
+Attempt #3
+Overall running time: 2.35895490646
+
+Attempt #4
+Overall running time: 2.39688110352
+
+Attempt #5
+Overall running time: 2.4736828804
+
+Attempt #6
+Overall running time: 2.36331796646
+
+Attempt #7
+Overall running time: 2.35177493095
+
+Attempt #8
+Overall running time: 2.82024097443
+
+Attempt #9
+Overall running time: 2.35887694359
+
+Attempt #10
+Overall running time: 2.35861992836
+
