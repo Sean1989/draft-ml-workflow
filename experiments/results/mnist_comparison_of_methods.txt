@@ -1,0 +1,43 @@
+====================================
+K-nearest neighbors:
+====================================
+Reading the dataset: ../data/mnist
+KNN validation accuracy on MNIST digits:  0.859
+Overall running time: 9.75093698502
+
+====================================
+Support vector machines:
+====================================
+Reading the dataset: ../data/mnist
+Applying a learning algorithm...
+Training: SVC with a Radial Basis Function (RBF) kernel...
+Making predictions...
+[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+Evaluating results...
+Precision: 	0.0121
+Recall: 	0.11
+F1 score: 	0.0218018018018
+Mean accuracy: 	0.11
+Overall running time: 15.3377640247
+
+====================================
+Random forest:
+====================================
+Reading the dataset: ../data/mnist
+Applying a learning algorithm...
+Making predictions...
+[ 7.  0.  7.  3.  7.  6.  1.  4.  2.  9.  1.  8.  4.  2.  3.  3.  0.  1.
+  4.  4.  8.  7.  6.  4.  0.  3.  5.  8.  1.  5.  3.  1.  0.  2.  3.  2.
+  3.  1.  5.  1.  6.  6.  7.  1.  6.  2.  1.  6.  1.  0.  3.  5.  5.  8.
+  9.  1.  1.  7.  1.  9.  7.  7.  7.  2.  7.  4.  1.  1.  1.  1.  7.  6.
+  5.  2.  4.  0.  7.  2.  9.  3.  2.  0.  9.  3.  8.  5.  6.  0.  1.  7.
+  2.  0.  8.  8.  7.  3.  1.  5.  5.  6.]
+Evaluating results...
+Precision: 	0.739450140503
+Recall: 	0.72
+F1 score: 	0.716358238734
+Mean accuracy: 	0.72
+Overall running time: 4.96857380867
+
