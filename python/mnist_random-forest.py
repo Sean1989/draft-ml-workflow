@@ -1,12 +1,12 @@
 import numpy
 import random
 from numpy import arange
-from sklearn import metrics
 from classification import *
-from mnist import MNIST
-from sklearn.ensemble import RandomForestClassifier
-import time
+from sklearn import metrics
 from sklearn.datasets import fetch_mldata
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.utils import shuffle
+import time
 
 
 def run(data_path):
@@ -15,6 +15,7 @@ def run(data_path):
     ## http://continuum.io/blog/wiserf-use-cases-and-benchmarks
 
     mnist = fetch_mldata('MNIST original')
+    mnist.data, mnist.target = shuffle(mnist.data, mnist.target)
 
     # Define training and testing sets
     inds = arange(len(mnist.data))
