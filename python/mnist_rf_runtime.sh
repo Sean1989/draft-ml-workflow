@@ -7,4 +7,4 @@
         python mnist_random-forest.py | grep "Overall running time"
         echo ""
     done
-) > ../experiments/results/mnist_rf_runtimes-with-mnist-package.txt
+) > ../experiments/results/mnist_rf_runtimes_.txt

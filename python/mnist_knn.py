@@ -5,19 +5,34 @@
     5%2520-%2520k%2520Nearest%2520Neighbors.ipynb
 
 """
+import numpy
 from sklearn import metrics
 from sklearn.utils import shuffle
+from sklearn.datasets import fetch_mldata
 from sklearn.neighbors import KNeighborsClassifier
+from numpy import arange
 from classification import *
-from mnist import MNIST
 import time
+import random
 
 
 def run(data_path):
     print "Reading the dataset:", data_path
-    mn = MNIST(data_path)
-    X_train, y_train = mn.load_training()
-    X_test, y_test = mn.load_testing()
+
+    ## http://continuum.io/blog/wiserf-use-cases-and-benchmarks
+
+    mnist = fetch_mldata('MNIST original')
+ 
+    # Define training and testing sets
+    inds = arange(len(mnist.data))
+    test_i = random.sample(xrange(len(inds)), int(0.1*len(inds)))
+    train_i = numpy.delete(inds, test_i)
+
+    X_train = mnist.data[train_i].astype(numpy.double)
+    y_train = mnist.target[train_i].astype(numpy.double)
+ 
+    X_test = mnist.data[test_i].astype(numpy.double)
+    y_test = mnist.target[test_i].astype(numpy.double)
 
     # Trunk the data
     X_digits, y_digits = shuffle(X_train, y_train)
