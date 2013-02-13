@@ -1,9 +1,10 @@
 import numpy as np
 from sklearn import metrics
 from sklearn.datasets import fetch_mldata
+from sklearn.multiclass import OneVsRestClassifier
+from sklearn.svm import LinearSVC
 from sklearn.utils import shuffle
 from numpy import arange
-from classification import *
 import time
 import random
 
@@ -27,7 +28,7 @@ def run(data_path):
 
     # Apply a learning algorithm
     print "Applying a learning algorithm..."
-    clf = default_svc(X_train, y_train)
+    clf = OneVsRestClassifier(LinearSVC()).fit(X_train, y_train)
 
     # Make a prediction
     print "Making predictions..."
