@@ -14,10 +14,10 @@ start_time = time.time()
 print "Reading the data..."
 data_path = '../data/digit-recognizer/'
 
-train_data = genfromtxt(data_path + 'train_debug.csv', skip_header=1, delimiter=',')
+train_data = genfromtxt(data_path + 'train.csv', skip_header=1, delimiter=',')
 X_train, y_train = train_data[:, 1:], train_data[:, 0]
 
-test_data = genfromtxt(data_path + 'test_debug.csv', skip_header=1, delimiter=',')
+test_data = genfromtxt(data_path + 'test.csv', skip_header=1, delimiter=',')
 X_test = test_data
 
 # Apply a learning algorithm
