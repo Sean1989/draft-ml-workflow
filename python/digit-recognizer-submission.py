@@ -3,6 +3,7 @@ import random
 from numpy import arange
 from numpy import genfromtxt
 from sklearn.multiclass import OneVsRestClassifier
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import LinearSVC
 from sklearn import metrics
 
@@ -22,14 +23,16 @@ X_test = test_data
 
 # Apply a learning algorithm
 print "Applying a learning algorithm..."
-clf = OneVsRestClassifier(LinearSVC()).fit(X_train, y_train)
+#clf = OneVsRestClassifier(LinearSVC()).fit(X_train, y_train)
+clf = KNeighborsClassifier(n_neighbors=10)
+clf.fit(X_train, y_train)
 
 # Make a prediction
 print "Making predictions..."
 y_pred = clf.predict(X_test)
 
 # Write it down in a file
-with open('../experiments/results/digit_recognizer_submission.csv', 'wb') as output_file:
+with open('../experiments/results/digit_recognizer_submission_knn.csv', 'wb') as output_file:
     for item in y_pred:
         output_file.write(str(int(item)) + '\n')
 
