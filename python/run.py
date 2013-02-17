@@ -1,4 +1,5 @@
 import sys
+import random
 import yaml
 from sklearn import metrics
 from get_data import *
@@ -18,6 +19,8 @@ def run(data_path, read_as, algorithm):
         print "Data reading function is not located. Please check it again."
         raise
 
+    random.seed(17)
+
     # Preprocess the data
     X_train, X_test, y_train, y_test, constraints = preprocess(raw_data)
 
@@ -31,6 +34,7 @@ def run(data_path, read_as, algorithm):
 
     # Make a prediction
     y_pred = clf.predict(X_test)
+    print "Predicted values:", y_pred
 
     # Evaluate the prediction
     print "Evaluating results..."

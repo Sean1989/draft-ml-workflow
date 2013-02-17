@@ -1,0 +1,373 @@
+$ bash iris.sh
+Reading the dataset: ../data/iris.data
+Resulting pairwise constraints:
+(array([-0.41600969,  1.03205722, -1.39813811, -1.31297673]), array([ 1.64384411,  1.26346019,  1.33141568,  1.71090158]), -1)
+(array([ 2.24968346, -1.05056946,  1.78634131,  1.44795564]), array([-0.17367395, -0.1249576 ,  0.25096731,  0.00175297]), -1)
+(array([-1.26418478,  0.80065426, -1.05694388, -1.31297673]), array([-1.02184904,  0.80065426, -1.2844067 , -1.31297673]), 1)
+(array([ 1.15917263, -0.58776353,  0.59216153,  0.26469891]), array([ 1.15917263, -0.1249576 ,  0.99022146,  1.1850097 ]), -1)
+(array([-0.90068117, -1.28197243, -0.43142114, -0.12972   ]), array([ 0.79566902, -0.58776353,  0.47843012,  0.39617188]), 1)
+(array([ 0.18982966,  0.80065426,  0.42156442,  0.52764485]), array([ 0.31099753, -1.05056946,  1.04708716,  0.26469891]), -1)
+(array([ 1.88617985, -0.58776353,  1.33141568,  0.92206376]), array([ 1.64384411,  1.26346019,  1.33141568,  1.71090158]), 1)
+(array([-0.41600969, -1.74477836,  0.1372359 ,  0.13322594]), array([-0.17367395,  3.11468391, -1.2844067 , -1.05003079]), -1)
+(array([ 0.18982966,  0.80065426,  0.42156442,  0.52764485]), array([ 0.79566902, -0.1249576 ,  0.81962435,  1.05353673]), -1)
+(array([-1.50652052,  0.80065426, -1.3412724 , -1.18150376]), array([ 0.4321654 , -0.58776353,  0.59216153,  0.79059079]), -1)
+Training: SVC parameter tuning...
+Best parameters set found on development set:
+
+SVC(C=1000, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.01, kernel=rbf, max_iter=-1, probability=False, shrinking=True,
+  tol=0.001, verbose=False)
+
+Grid scores on development set:
+
+0.804 (+/-0.043) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.01}
+0.145 (+/-0.005) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.001}
+0.145 (+/-0.005) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001}
+0.931 (+/-0.008) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.01}
+0.833 (+/-0.034) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.001}
+0.145 (+/-0.005) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001}
+0.946 (+/-0.002) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.01}
+0.931 (+/-0.008) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.001}
+0.845 (+/-0.026) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001}
+0.954 (+/-0.007) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.01}
+0.939 (+/-0.005) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001}
+0.931 (+/-0.008) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001}
+Best parameters set found on development set:
+
+SVC(C=1000, cache_size=200, class_weight=None, coef0=0.0, degree=3,
+  gamma=0.01, kernel=rbf, max_iter=-1, probability=False, shrinking=True,
+  tol=0.001, verbose=False)
+
+Grid scores on development set:
+
+0.770 (+/-0.039) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.01}
+0.380 (+/-0.006) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.001}
+0.380 (+/-0.006) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001}
+0.920 (+/-0.008) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.01}
+0.791 (+/-0.042) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.001}
+0.380 (+/-0.006) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001}
+0.940 (+/-0.000) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.01}
+0.920 (+/-0.008) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.001}
+0.801 (+/-0.039) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001}
+0.950 (+/-0.007) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.01}
+0.930 (+/-0.007) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001}
+0.920 (+/-0.008) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001}
+Predicted values: [ 1.  0.  0.  2.  0.  0.  0.  2.  2.  2.  2.  1.  2.  0.  1.  2.  0.  2.
+  1.  2.  2.  1.  2.  0.  1.  0.  2.  2.  1.  2.  2.  0.  0.  1.  0.  1.
+  1.  1.  2.  0.  1.  2.  1.  1.  1.  0.  1.  1.  2.  2.]
+Evaluating results...
+Precision: 	0.965714285714
+Recall: 	0.96
+F1 score: 	0.960538461538
+Mean accuracy: 	0.96
+$ bash iris.sh
+Reading the dataset: ../data/iris.data
+Resulting pairwise constraints:
+(array([-1.74885626, -0.1249576 , -1.39813811, -1.31297673]), array([-1.14301691, -0.1249576 , -1.3412724 , -1.31297673]), 1)
+(array([-1.38535265,  0.33784833, -1.39813811, -1.31297673]), array([-0.53717756,  1.49486315, -1.2844067 , -1.31297673]), 1)
+(array([-0.41600969, -1.51337539,  0.02350449, -0.12972   ]), array([-0.53717756,  0.80065426, -1.17067529, -1.31297673]), -1)
+(array([-1.14301691, -1.51337539, -0.26082403, -0.26119297]), array([ 1.64384411, -0.1249576 ,  1.16081857,  0.52764485]), -1)
+(array([ 0.79566902,  0.33784833,  0.76275864,  1.05353673]), array([ 0.55333328,  0.56925129,  0.53529583,  0.52764485]), -1)
+(array([ 0.79566902, -0.1249576 ,  0.99022146,  0.79059079]), array([ 0.91683689, -0.1249576 ,  0.36469871,  0.26469891]), -1)
+(array([-1.14301691, -1.28197243,  0.42156442,  0.65911782]), array([-1.14301691, -0.1249576 , -1.3412724 , -1.31297673]), -1)
+(array([-0.17367395, -0.35636057,  0.25096731,  0.13322594]), array([-1.50652052,  0.33784833, -1.3412724 , -1.31297673]), -1)
+(array([ 0.79566902, -0.1249576 ,  0.99022146,  0.79059079]), array([ 0.67450115,  0.10644536,  0.99022146,  0.79059079]), 1)
+(array([ 1.76501198, -0.35636057,  1.44514709,  0.79059079]), array([ 2.24968346, -0.58776353,  1.67260991,  1.05353673]), 1)
+Training: SVC parameter tuning...
+Best parameters set found on development set:
+
+SVC(C=100, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.01,
+  kernel=rbf, max_iter=-1, probability=False, shrinking=True, tol=0.001,
+  verbose=False)
+
+Grid scores on development set:
+
+0.856 (+/-0.045) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.01}
+0.130 (+/-0.002) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.001}
+0.130 (+/-0.002) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001}
+0.928 (+/-0.024) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.01}
+0.862 (+/-0.047) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.001}
+0.356 (+/-0.082) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001}
+0.961 (+/-0.019) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.01}
+0.928 (+/-0.024) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.001}
+0.862 (+/-0.047) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001}
+0.953 (+/-0.019) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.01}
+0.961 (+/-0.019) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001}
+0.928 (+/-0.024) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001}
+Best parameters set found on development set:
+
+SVC(C=100, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.01,
+  kernel=rbf, max_iter=-1, probability=False, shrinking=True, tol=0.001,
+  verbose=False)
+
+Grid scores on development set:
+
+0.839 (+/-0.040) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.01}
+0.360 (+/-0.003) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.001}
+0.360 (+/-0.003) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001}
+0.920 (+/-0.026) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.01}
+0.849 (+/-0.043) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.001}
+0.390 (+/-0.015) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001}
+0.950 (+/-0.026) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.01}
+0.920 (+/-0.026) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.001}
+0.849 (+/-0.043) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001}
+0.940 (+/-0.025) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.01}
+0.950 (+/-0.026) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001}
+0.920 (+/-0.026) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001}
+Predicted values: [ 0.  1.  1.  2.  0.  0.  1.  2.  0.  2.  2.  2.  1.  0.  1.  2.  0.  2.
+  0.  1.  1.  0.  1.  0.  2.  1.  1.  2.  2.  1.  2.  2.  2.  2.  1.  0.
+  1.  0.  1.  2.  2.  2.  0.  0.  0.  1.  2.  1.  0.  2.]
+Evaluating results...
+Precision: 	0.981333333333
+Recall: 	0.98
+F1 score: 	0.98008841733
+Mean accuracy: 	0.98
+$ bash iris.sh
+Reading the dataset: ../data/iris.data
+Resulting pairwise constraints:
+(array([-0.17367395,  3.11468391, -1.2844067 , -1.05003079]), array([-0.05250608, -0.8191665 ,  0.08037019,  0.00175297]), -1)
+(array([ 1.64384411,  1.26346019,  1.33141568,  1.71090158]), array([ 0.91683689, -0.1249576 ,  0.36469871,  0.26469891]), -1)
+(array([ 0.55333328, -1.28197243,  0.70589294,  0.92206376]), array([-1.50652052,  0.80065426, -1.3412724 , -1.18150376]), -1)
+(array([-1.26418478,  0.80065426, -1.05694388, -1.31297673]), array([ 2.24968346, -0.1249576 ,  1.33141568,  1.44795564]), -1)
+(array([-0.53717756,  1.49486315, -1.2844067 , -1.31297673]), array([ 1.03800476, -0.1249576 ,  0.70589294,  0.65911782]), -1)
+(array([-0.17367395,  1.72626612, -1.17067529, -1.18150376]), array([ 0.4321654 ,  0.80065426,  0.93335575,  1.44795564]), -1)
+(array([-0.17367395, -1.05056946, -0.14709262, -0.26119297]), array([-0.05250608, -0.8191665 ,  0.08037019,  0.00175297]), 1)
+(array([ 0.79566902, -0.58776353,  0.47843012,  0.39617188]), array([-0.05250608, -0.8191665 ,  0.1941016 , -0.26119297]), 1)
+(array([-0.17367395,  1.72626612, -1.17067529, -1.18150376]), array([-0.90068117, -1.28197243, -0.43142114, -0.12972   ]), -1)
+(array([-0.53717756, -0.1249576 ,  0.42156442,  0.39617188]), array([ 0.55333328,  0.56925129,  1.27454998,  1.71090158]), -1)
+Training: SVC parameter tuning...
+Best parameters set found on development set:
+
+SVC(C=100, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.01,
+  kernel=rbf, max_iter=-1, probability=False, shrinking=True, tol=0.001,
+  verbose=False)
+
+Grid scores on development set:
+
+0.922 (+/-0.004) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.01}
+0.130 (+/-0.002) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.001}
+0.130 (+/-0.002) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001}
+0.983 (+/-0.012) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.01}
+0.928 (+/-0.001) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.001}
+0.130 (+/-0.002) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001}
+0.991 (+/-0.007) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.01}
+0.983 (+/-0.012) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.001}
+0.928 (+/-0.001) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001}
+0.974 (+/-0.011) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.01}
+0.991 (+/-0.007) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001}
+0.983 (+/-0.012) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001}
+Best parameters set found on development set:
+
+SVC(C=100, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.01,
+  kernel=rbf, max_iter=-1, probability=False, shrinking=True, tol=0.001,
+  verbose=False)
+
+Grid scores on development set:
+
+0.900 (+/-0.006) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.01}
+0.360 (+/-0.003) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.001}
+0.360 (+/-0.003) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001}
+0.980 (+/-0.014) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.01}
+0.910 (+/-0.001) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.001}
+0.360 (+/-0.003) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001}
+0.990 (+/-0.007) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.01}
+0.980 (+/-0.014) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.001}
+0.910 (+/-0.001) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001}
+0.970 (+/-0.012) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.01}
+0.990 (+/-0.007) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001}
+0.980 (+/-0.014) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001}
+Predicted values: [ 0.  1.  0.  2.  1.  0.  1.  2.  0.  0.  2.  1.  0.  2.  0.  2.  1.  2.
+  1.  0.  0.  0.  1.  2.  1.  0.  2.  1.  0.  0.  2.  2.  2.  1.  1.  0.
+  2.  1.  0.  0.  1.  1.  0.  1.  0.  0.  0.  0.  2.  1.]
+Evaluating results...
+Precision: 	0.980952380952
+Recall: 	0.98
+F1 score: 	0.979873532069
+Mean accuracy: 	0.98
+$ bash iris.sh
+Reading the dataset: ../data/iris.data
+Resulting pairwise constraints:
+(array([ 0.67450115,  0.33784833,  0.42156442,  0.39617188]), array([ 1.03800476, -0.1249576 ,  0.81962435,  1.44795564]), -1)
+(array([-0.05250608, -0.8191665 ,  0.08037019,  0.00175297]), array([-0.41600969, -1.28197243,  0.1372359 ,  0.13322594]), 1)
+(array([ 1.64384411,  0.33784833,  1.27454998,  0.79059079]), array([ 1.64384411, -0.1249576 ,  1.16081857,  0.52764485]), 1)
+(array([ 0.79566902, -0.1249576 ,  0.81962435,  1.05353673]), array([ 0.55333328, -1.28197243,  0.70589294,  0.92206376]), 1)
+(array([-1.50652052,  1.26346019, -1.56873522, -1.31297673]), array([ 1.2803405 ,  0.10644536,  0.76275864,  1.44795564]), -1)
+(array([-0.17367395, -1.28197243,  0.70589294,  1.05353673]), array([ 0.55333328,  0.56925129,  0.53529583,  0.52764485]), -1)
+(array([ 0.31099753, -0.58776353,  0.1372359 ,  0.13322594]), array([ 1.03800476, -0.1249576 ,  0.81962435,  1.44795564]), -1)
+(array([-1.50652052,  0.33784833, -1.3412724 , -1.31297673]), array([ 0.31099753, -0.1249576 ,  0.64902723,  0.79059079]), -1)
+(array([-0.17367395, -1.28197243,  0.70589294,  1.05353673]), array([ 1.2803405 ,  0.10644536,  0.64902723,  0.39617188]), -1)
+(array([-0.17367395, -0.58776353,  0.42156442,  0.13322594]), array([-1.38535265,  0.33784833, -1.227541  , -1.31297673]), -1)
+Training: SVC parameter tuning...
+Best parameters set found on development set:
+
+SVC(C=10, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.01,
+  kernel=rbf, max_iter=-1, probability=False, shrinking=True, tol=0.001,
+  verbose=False)
+
+Grid scores on development set:
+
+0.912 (+/-0.000) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.01}
+0.123 (+/-0.004) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.001}
+0.123 (+/-0.004) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001}
+0.982 (+/-0.006) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.01}
+0.901 (+/-0.008) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.001}
+0.123 (+/-0.004) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001}
+0.971 (+/-0.012) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.01}
+0.982 (+/-0.006) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.001}
+0.901 (+/-0.008) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001}
+0.962 (+/-0.007) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.01}
+0.971 (+/-0.012) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001}
+0.982 (+/-0.006) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001}
+Best parameters set found on development set:
+
+SVC(C=10, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.01,
+  kernel=rbf, max_iter=-1, probability=False, shrinking=True, tol=0.001,
+  verbose=False)
+
+Grid scores on development set:
+
+0.910 (+/-0.001) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.01}
+0.350 (+/-0.006) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.001}
+0.350 (+/-0.006) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001}
+0.980 (+/-0.007) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.01}
+0.900 (+/-0.007) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.001}
+0.350 (+/-0.006) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001}
+0.970 (+/-0.012) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.01}
+0.980 (+/-0.007) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.001}
+0.900 (+/-0.007) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001}
+0.960 (+/-0.007) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.01}
+0.970 (+/-0.012) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001}
+0.980 (+/-0.007) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001}
+Predicted values: [ 0.  0.  2.  2.  0.  0.  1.  2.  1.  2.  1.  1.  0.  1.  1.  1.  2.  2.
+  1.  1.  0.  2.  2.  1.  1.  0.  0.  2.  2.  1.  2.  0.  1.  0.  0.  2.
+  2.  2.  1.  0.  0.  2.  1.  0.  2.  2.  1.  0.  1.  1.]
+Evaluating results...
+Precision: 	0.924392156863
+Recall: 	0.92
+F1 score: 	0.92
+Mean accuracy: 	0.92
+$ bash iris.sh
+Reading the dataset: ../data/iris.data
+Resulting pairwise constraints:
+(array([-0.41600969, -1.51337539,  0.02350449, -0.12972   ]), array([ 0.67450115, -0.58776353,  1.04708716,  1.1850097 ]), -1)
+(array([ 0.55333328, -0.35636057,  1.04708716,  0.79059079]), array([-0.29484182, -1.28197243,  0.08037019, -0.12972   ]), -1)
+(array([-1.14301691,  0.10644536, -1.2844067 , -1.4444497 ]), array([-1.74885626, -0.35636057, -1.3412724 , -1.31297673]), 1)
+(array([ 0.18982966, -0.1249576 ,  0.59216153,  0.79059079]), array([ 0.67450115,  0.10644536,  0.99022146,  0.79059079]), 1)
+(array([ 0.31099753, -0.58776353,  0.1372359 ,  0.13322594]), array([ 0.31099753, -1.05056946,  1.04708716,  0.26469891]), -1)
+(array([-0.90068117,  0.56925129, -1.17067529, -0.91855782]), array([-0.05250608, -0.8191665 ,  0.1941016 , -0.26119297]), -1)
+(array([-1.74885626, -0.1249576 , -1.39813811, -1.31297673]), array([ 0.67450115, -0.58776353,  1.04708716,  1.1850097 ]), -1)
+(array([ 1.64384411, -0.1249576 ,  1.16081857,  0.52764485]), array([ 1.2803405 ,  0.10644536,  0.93335575,  1.1850097 ]), 1)
+(array([-0.90068117,  0.56925129, -1.17067529, -0.91855782]), array([ 2.24968346,  1.72626612,  1.67260991,  1.31648267]), -1)
+(array([ 1.88617985, -0.58776353,  1.33141568,  0.92206376]), array([ 0.55333328, -0.58776353,  0.76275864,  0.39617188]), 1)
+Training: SVC parameter tuning...
+Best parameters set found on development set:
+
+SVC(C=10, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.01,
+  kernel=rbf, max_iter=-1, probability=False, shrinking=True, tol=0.001,
+  verbose=False)
+
+Grid scores on development set:
+
+0.886 (+/-0.026) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.01}
+0.370 (+/-0.094) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.001}
+0.370 (+/-0.094) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001}
+0.968 (+/-0.014) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.01}
+0.886 (+/-0.026) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.001}
+0.370 (+/-0.094) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001}
+0.957 (+/-0.005) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.01}
+0.958 (+/-0.010) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.001}
+0.886 (+/-0.026) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001}
+0.951 (+/-0.009) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.01}
+0.957 (+/-0.005) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001}
+0.958 (+/-0.010) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001}
+Best parameters set found on development set:
+
+SVC(C=10, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.01,
+  kernel=rbf, max_iter=-1, probability=False, shrinking=True, tol=0.001,
+  verbose=False)
+
+Grid scores on development set:
+
+0.880 (+/-0.025) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.01}
+0.572 (+/-0.088) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.001}
+0.572 (+/-0.088) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001}
+0.960 (+/-0.019) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.01}
+0.880 (+/-0.025) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.001}
+0.572 (+/-0.088) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001}
+0.950 (+/-0.007) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.01}
+0.950 (+/-0.014) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.001}
+0.880 (+/-0.025) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001}
+0.940 (+/-0.012) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.01}
+0.950 (+/-0.007) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001}
+0.950 (+/-0.014) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001}
+Predicted values: [ 0.  1.  2.  1.  2.  0.  1.  1.  2.  0.  2.  0.  0.  2.  1.  1.  0.  2.
+  0.  0.  1.  2.  2.  2.  2.  1.  2.  1.  1.  0.  2.  1.  0.  2.  1.  2.
+  1.  2.  0.  0.  0.  1.  1.  2.  2.  0.  0.  2.  0.  2.]
+Evaluating results...
+Precision: 	1.0
+Recall: 	1.0
+F1 score: 	1.0
+Mean accuracy: 	1.0
+$ bash iris.sh
+Reading the dataset: ../data/iris.data
+Resulting pairwise constraints:
+(array([-1.87002413, -0.1249576 , -1.51186952, -1.4444497 ]), array([-0.17367395, -1.28197243,  0.70589294,  1.05353673]), -1)
+(array([-1.50652052,  0.33784833, -1.3412724 , -1.31297673]), array([ 1.15917263, -0.58776353,  0.59216153,  0.26469891]), -1)
+(array([-0.17367395, -0.58776353,  0.42156442,  0.13322594]), array([-0.29484182, -0.1249576 ,  0.1941016 ,  0.13322594]), 1)
+(array([-1.74885626, -0.1249576 , -1.39813811, -1.31297673]), array([ 1.40150837,  0.33784833,  0.53529583,  0.26469891]), -1)
+(array([-1.02184904,  0.56925129, -1.3412724 , -1.31297673]), array([-0.53717756,  0.80065426, -1.2844067 , -1.05003079]), 1)
+(array([-0.05250608, -1.05056946,  0.1372359 ,  0.00175297]), array([-1.02184904,  1.03205722, -1.227541  , -0.78708485]), -1)
+(array([ 0.91683689, -0.35636057,  0.47843012,  0.13322594]), array([-0.17367395, -1.28197243,  0.70589294,  1.05353673]), -1)
+(array([ 0.55333328, -0.8191665 ,  0.64902723,  0.79059079]), array([ 2.24968346, -1.05056946,  1.78634131,  1.44795564]), 1)
+(array([-0.05250608, -1.05056946,  0.1372359 ,  0.00175297]), array([-0.29484182, -1.28197243,  0.08037019, -0.12972   ]), 1)
+(array([ 0.67450115, -0.58776353,  1.04708716,  1.1850097 ]), array([-1.38535265,  0.33784833, -1.227541  , -1.31297673]), -1)
+Training: SVC parameter tuning...
+Best parameters set found on development set:
+
+SVC(C=10, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.01,
+  kernel=rbf, max_iter=-1, probability=False, shrinking=True, tol=0.001,
+  verbose=False)
+
+Grid scores on development set:
+
+0.925 (+/-0.025) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.01}
+0.365 (+/-0.092) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.001}
+0.365 (+/-0.092) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001}
+0.965 (+/-0.005) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.01}
+0.934 (+/-0.019) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.001}
+0.365 (+/-0.092) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001}
+0.965 (+/-0.005) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.01}
+0.965 (+/-0.005) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.001}
+0.934 (+/-0.019) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001}
+0.961 (+/-0.019) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.01}
+0.965 (+/-0.005) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001}
+0.965 (+/-0.005) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001}
+Best parameters set found on development set:
+
+SVC(C=10, cache_size=200, class_weight=None, coef0=0.0, degree=3, gamma=0.01,
+  kernel=rbf, max_iter=-1, probability=False, shrinking=True, tol=0.001,
+  verbose=False)
+
+Grid scores on development set:
+
+0.921 (+/-0.025) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.01}
+0.572 (+/-0.088) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.001}
+0.572 (+/-0.088) for {'kernel': 'rbf', 'C': 1, 'gamma': 0.0001}
+0.960 (+/-0.007) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.01}
+0.930 (+/-0.018) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.001}
+0.572 (+/-0.088) for {'kernel': 'rbf', 'C': 10, 'gamma': 0.0001}
+0.960 (+/-0.007) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.01}
+0.960 (+/-0.007) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.001}
+0.930 (+/-0.018) for {'kernel': 'rbf', 'C': 100, 'gamma': 0.0001}
+0.960 (+/-0.019) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.01}
+0.960 (+/-0.007) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.001}
+0.960 (+/-0.007) for {'kernel': 'rbf', 'C': 1000, 'gamma': 0.0001}
+Predicted values: [ 0.  0.  1.  0.  1.  0.  1.  1.  1.  0.  1.  1.  2.  0.  0.  2.  0.  1.
+  1.  2.  2.  0.  2.  2.  2.  2.  1.  2.  0.  2.  0.  0.  2.  2.  1.  1.
+  2.  0.  2.  2.  0.  2.  1.  0.  0.  2.  2.  0.  1.  1.]
+Evaluating results...
+Precision: 	0.941241830065
+Recall: 	0.94
+F1 score: 	0.940098280098
+Mean accuracy: 	0.94
+
