@@ -1,0 +1,7 @@
+Algorithm: svc
+Data: ../data/float_features_dataset.csv
+Read as: numbers
+F1 score: 0.6226415094339622
+Mean accuracy: 0.4520547945205479
+Precision: 0.4520547945205479
+Recall: 1.0
