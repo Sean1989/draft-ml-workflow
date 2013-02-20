@@ -24,7 +24,7 @@ X_test = test_data
 # Apply a learning algorithm
 print "Applying a learning algorithm..."
 #clf = OneVsRestClassifier(LinearSVC()).fit(X_train, y_train)
-clf = KNeighborsClassifier(n_neighbors=10, weights='distance')
+clf = KNeighborsClassifier(n_neighbors=25, weights='distance')
 clf.fit(X_train, y_train)
 
 # Make a prediction
@@ -35,6 +35,8 @@ y_pred = clf.predict(X_test)
 with open('../experiments/results/digit_recognizer_submission_knn_distance.csv', 'wb') as output_file:
     for item in y_pred:
         output_file.write(str(int(item)) + '\n')
+
+#np.savetxt(".csv", y_pred, fmt="%d")
 
 # Calculate overall time
 end_time = time.time()
