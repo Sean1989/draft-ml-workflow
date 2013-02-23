@@ -1,0 +1,140 @@
+Precision:	0.950555555556
+Recall:	0.95
+F1 score:	0.949922158796
+Mean accuracy:	0.95
+
+Classification report:              precision    recall  f1-score   support
+
+     setosa       1.00      1.00      1.00        16
+ versicolor       0.92      0.96      0.94        23
+  virginica       0.95      0.90      0.93        21
+
+avg / total       0.95      0.95      0.95        60
+
+========================================
+Precision:	0.984126984127
+Recall:	0.983333333333
+F1 score:	0.983333333333
+Mean accuracy:	0.983333333333
+
+Classification report:              precision    recall  f1-score   support
+
+     setosa       1.00      1.00      1.00        19
+ versicolor       1.00      0.95      0.98        21
+  virginica       0.95      1.00      0.98        20
+
+avg / total       0.98      0.98      0.98        60
+
+========================================
+Precision:	0.966666666667
+Recall:	0.966666666667
+F1 score:	0.966666666667
+Mean accuracy:	0.966666666667
+
+Classification report:              precision    recall  f1-score   support
+
+     setosa       1.00      1.00      1.00        23
+ versicolor       0.94      0.94      0.94        16
+  virginica       0.95      0.95      0.95        21
+
+avg / total       0.97      0.97      0.97        60
+
+========================================
+Precision:	0.97
+Recall:	0.966666666667
+F1 score:	0.966666666667
+Mean accuracy:	0.966666666667
+
+Classification report:              precision    recall  f1-score   support
+
+     setosa       1.00      1.00      1.00        22
+ versicolor       1.00      0.90      0.95        20
+  virginica       0.90      1.00      0.95        18
+
+avg / total       0.97      0.97      0.97        60
+
+========================================
+Precision:	0.984210526316
+Recall:	0.983333333333
+F1 score:	0.983306033306
+Mean accuracy:	0.983333333333
+
+Classification report:              precision    recall  f1-score   support
+
+     setosa       1.00      1.00      1.00        25
+ versicolor       1.00      0.94      0.97        17
+  virginica       0.95      1.00      0.97        18
+
+avg / total       0.98      0.98      0.98        60
+
+========================================
+Precision:	0.984166666667
+Recall:	0.983333333333
+F1 score:	0.983343756514
+Mean accuracy:	0.983333333333
+
+Classification report:              precision    recall  f1-score   support
+
+     setosa       1.00      1.00      1.00        20
+ versicolor       1.00      0.95      0.98        21
+  virginica       0.95      1.00      0.97        19
+
+avg / total       0.98      0.98      0.98        60
+
+========================================
+Precision:	0.97
+Recall:	0.966666666667
+F1 score:	0.966666666667
+Mean accuracy:	0.966666666667
+
+Classification report:              precision    recall  f1-score   support
+
+     setosa       1.00      1.00      1.00        22
+ versicolor       0.90      1.00      0.95        18
+  virginica       1.00      0.90      0.95        20
+
+avg / total       0.97      0.97      0.97        60
+
+========================================
+Precision:	0.969696969697
+Recall:	0.966666666667
+F1 score:	0.966626984127
+Mean accuracy:	0.966666666667
+
+Classification report:              precision    recall  f1-score   support
+
+     setosa       1.00      1.00      1.00        19
+ versicolor       1.00      0.90      0.95        21
+  virginica       0.91      1.00      0.95        20
+
+avg / total       0.97      0.97      0.97        60
+
+========================================
+Precision:	0.95060690943
+Recall:	0.95
+F1 score:	0.949895470383
+Mean accuracy:	0.95
+
+Classification report:              precision    recall  f1-score   support
+
+     setosa       1.00      1.00      1.00        22
+ versicolor       0.90      0.95      0.93        20
+  virginica       0.94      0.89      0.91        18
+
+avg / total       0.95      0.95      0.95        60
+
+========================================
+Precision:	1.0
+Recall:	1.0
+F1 score:	1.0
+Mean accuracy:	1.0
+
+Classification report:              precision    recall  f1-score   support
+
+     setosa       1.00      1.00      1.00        22
+ versicolor       1.00      1.00      1.00        20
+  virginica       1.00      1.00      1.00        18
+
+avg / total       1.00      1.00      1.00        60
+
+========================================
