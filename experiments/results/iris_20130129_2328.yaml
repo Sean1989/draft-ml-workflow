@@ -1,6 +1,0 @@
-Algorithm: svc_rbf
-Data: ../data/iris.data
-Read as: iris
-F1 score: 0.979887730553328
-Precision: 0.980909090909091
-Recall: 0.98

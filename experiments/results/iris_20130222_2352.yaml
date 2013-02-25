@@ -1,7 +1,0 @@
-Algorithm: svc
-Data: ../data/iris.data
-Read as: iris
-F1 score: 0.98
-Mean accuracy: 0.98
-Precision: 0.98125
-Recall: 0.98
