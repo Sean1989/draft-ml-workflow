@@ -1,5 +1,0 @@
-Algorithm: svc_rbf
-Data: ../data/spambase.data
-F1 score: 0.9025641025641026
-Precision: 0.9214659685863874
-Recall: 0.8844221105527639
