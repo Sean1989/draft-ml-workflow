@@ -1,7 +1,0 @@
-Algorithm: svc_rbf
-Data: ../data/cmc.data
-Read as: numbers
-F1 score: 0.5570880847573814
-Mean accuracy: 0.5605749486652978
-Precision: 0.5637888587510332
-Recall: 0.5605749486652978
